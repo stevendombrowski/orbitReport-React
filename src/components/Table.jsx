@@ -10,14 +10,16 @@ const Table = ({ sat }) => {
       </tr>
      </thead>
      <tbody>
-      {sat.map(({id, data}) =>(
-      <tr key={id}>
-        <td>{data.name}</td>
-        <td>{data.type}</td>
-        <td>{data.launchDate}</td>
-        <td>{data.status}</td>
-      </tr>
-  ))}
+     {sat.map((current)=>{
+        return(
+          <tr>
+            <td>{current.name}</td>
+            <td>{current.type}</td>
+            <td>{current.launchDate}</td>
+            <td>{current.orbitType}</td>
+          </tr>
+        )
+      })}
      </tbody>
    </table>
   );
